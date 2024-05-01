@@ -1,25 +1,39 @@
 function updateTime(){
+  let dubaiElement = document.querySelector("#dubai");
+  if (dubaiElement) {
+    let dubaiDateElement = dubaiElement.querySelector(".date");
+    let dubaiTimeElement = dubaiElement.querySelector(".time");
+    let dubaiTime = moment().tz("Asia/Dubai");
 
-let riyadhElement = document.querySelector("#riyadh");
-if (riyadhElement) {
-let riyadhDateElement = riyadhElement.querySelector(".date");
-let riyadhTimeElement = riyadhElement.querySelector(".time");
-let riyadhTime = moment().tz("Asia/Riyadh");
+    dubaiDateElement.innerHTML = dubaiTime.format("MMMM do YYYY");
+    dubaiTimeElement.innerHTML = dubaiTime.format(
+      " hh:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-riyadhDateElement.innerHTML = riyadhTime.format("MMMM do YYYY");
-riyadhTimeElement.innerHTML = riyadhTime.format(" hh:mm:ss [<small>]A[</small>]");
-};
+  let riyadhElement = document.querySelector("#riyadh");
+  if (riyadhElement) {
+    let riyadhDateElement = riyadhElement.querySelector(".date");
+    let riyadhTimeElement = riyadhElement.querySelector(".time");
+    let riyadhTime = moment().tz("Asia/Riyadh");
 
-let tokyoElement = document.querySelector("#tokyo");
-if (tokyoElement) {
-let tokyoDateElement = tokyoElement.querySelector(".date");
-let tokyoTimeElement = tokyoElement.querySelector(".time");
-let tokyoTime = moment().tz("Asia/Tokyo");
+    riyadhDateElement.innerHTML = riyadhTime.format("MMMM do YYYY");
+    riyadhTimeElement.innerHTML = riyadhTime.format(
+      " hh:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-tokyoDateElement.innerHTML = tokyoTime.format("MMMM do YYYY");
-tokyoTimeElement.innerHTML = tokyoTime.format(
-  "hh:mm:ss [<small>]A[</small>]");
-}
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
+
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
 };
 
 function updateCity(event) {
