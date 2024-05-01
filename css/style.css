@@ -6,11 +6,13 @@ body {
 h1 {
   text-align: center;
   font-size: 36px;
+  color: palevioletred;
 }
 
 h2 {
   margin: 0 0 5px;
   font-size: 28px;
+  color: rgb(219, 137, 164);
 }
 
 select {
@@ -42,6 +44,7 @@ select {
   font-weight: bold;
   vertical-align: middle;
   line-height: 48px;
+  color: gray;
 }
 
 .time small{
@@ -62,6 +65,7 @@ select {
 
 footer {
   text-align: center;
-  font-size: 18px;
-  color: rgb(0, 0, 0, 0.8);
+  font-size: 12px;
+  color: gray;
+  font-family: monospace;
 }
